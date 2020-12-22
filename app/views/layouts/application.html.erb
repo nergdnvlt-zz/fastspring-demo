@@ -7,16 +7,16 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-        <%= javascript_include_tag 
-      src="https://d1f8f9xcsvx3ha.cloudfront.net/sbl/0.8.3/fastspring-builder.min.js", 
-      id: "fsc-api", 
-      type: "text/javascript", 
-      data: { 
-        storefront: "liquidtextqa.qa.onfastspring.com/popup-liquidtextqa", 
-        'popup-webhook-received' => "popupWebhookReceived", 
-        "popup-closed" => "popupClose"
-        }
-    %>
+    <%= javascript_include_tag src="https://d1f8f9xcsvx3ha.cloudfront.net/sbl/0.8.0/fastspring-builder.min.js", id: "fsc-api", type: "text/javascript", data: { storefront: "liquidtextqa.qa.onfastspring.com/popup-liquidtextqa", 'popup-webhook-received' => "popupWebhookReceived", "popup-closed" => "popupClose", "continuous" => "true" } %>
+  </head>
+
+  <body>
+
+    <%= yield %>
+
+  </body>
+</html>
+
   </head>
 
   <body>
